@@ -9,18 +9,17 @@ import useToken from './useToken';
 function App() {
 
   const { token, setToken } = useToken();
-
   if(!token) {
     return <Login setToken={setToken} />
   }
-
+  
   return (
     <div className="wrapper">
       <h1>Pseudokrew</h1>
       <BrowserRouter>
         <Switch>
           <Route path="/profile">
-            <Profile />
+            <Profile username={token.username}/>
           </Route>
           <Route path="/settings">
             <Settings />
