@@ -12,14 +12,15 @@ function App() {
   if(!token) {
     return <Login setToken={setToken} />
   }
-  
+
   return (
     <div className="wrapper">
       <h1>Pseudokrew</h1>
+      <h2>Currently logged in as <span className="capitalize-name">{token.username}</span></h2>
       <BrowserRouter>
         <Switch>
           <Route path="/profile">
-            <Profile username={token.username}/>
+            <Profile />
           </Route>
           <Route path="/settings">
             <Settings />

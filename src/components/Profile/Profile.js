@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Profile(props) {
+export default function Profile() {
   return(
-    <h2 className="capitalize-name">{props.username}'s Profile Page</h2>
+    <h2>Profile Page</h2>
   );
 }

@@ -25,7 +25,7 @@ export default function Login({ setToken }) {
     });
     setToken(token);
   }
-
+  
   return(
     <div className="login-wrapper">
       <h1>Please Log In</h1>
@@ -39,7 +39,7 @@ export default function Login({ setToken }) {
           <input type="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={!(username && password)}>Submit</button>
         </div>
       </form>
     </div>
