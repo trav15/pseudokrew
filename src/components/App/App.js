@@ -1,10 +1,19 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css';
 import Profile from '../Profile/Profile';
+import Login from '../Login/Login';
 import Settings from '../Settings/Settings';
+import useToken from './useToken';
 
 function App() {
+
+  const { token, setToken } = useToken();
+
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+
   return (
     <div className="wrapper">
       <h1>Pseudokrew</h1>
