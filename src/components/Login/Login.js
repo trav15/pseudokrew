@@ -25,21 +25,21 @@ export default function Login({ setToken }) {
     });
     setToken(token);
   }
-  
+
   return(
     <div className="login-wrapper">
       <h1>Please Log In</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          <p>Username</p>
-          <input type="text" onChange={e => setUserName(e.target.value)} />
+          <p className="input-label">Username</p>
+          <input type="text" className="username" onChange={e => setUserName(e.target.value)} />
         </label>
         <label>
-          <p>Password</p>
-          <input type="password" onChange={e => setPassword(e.target.value)} />
+          <p className="input-label">Password</p>
+          <input type="password" className="password" onChange={e => setPassword(e.target.value)} />
         </label>
         <div>
-          <button type="submit" disabled={!(username && password)}>Submit</button>
+          <button type="submit" className="btn" disabled={!(username && password)}>Log in</button>
         </div>
       </form>
     </div>
