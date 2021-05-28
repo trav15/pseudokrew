@@ -1,2 +1,2 @@
 # Sudokrew Challenge
-## by Travis Tokuyama
+by Travis Tokuyama
