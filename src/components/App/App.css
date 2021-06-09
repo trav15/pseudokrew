@@ -65,6 +65,20 @@ h1{
   font-size:0.8em;
 }
 
+.logout-btn{
+  background:#5f7baf;
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border:none;
+  border-radius:4px; 
+  margin: 25px auto;
+  display:block;
+  font-weight:800;
+  font-size:0.8em;
+}
+
 .btn:disabled{
   background:#575757
 }

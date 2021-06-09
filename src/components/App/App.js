@@ -8,7 +8,7 @@ import useToken from './useToken';
 
 function App() {
 
-  const { token, setToken } = useToken();
+  const { token, setToken, clearToken } = useToken();
   if(!token) {
     return <Login setToken={setToken} />
   }
@@ -18,6 +18,8 @@ function App() {
     <div className="wrapper">
       <h1>Pseudokrew</h1>
       <h2>Currently logged in as <span className="capitalize-name">{token.username}</span></h2>
+      <h3>authToken is {token.authToken}</h3>
+      <button className="logout-btn" onClick={clearToken}>Log Out</button>
       <BrowserRouter>
         <Switch>
           <Route path="/profile">
